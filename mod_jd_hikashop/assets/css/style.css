@@ -1,0 +1,302 @@
+/*-- List --*/
+
+.jd-hikashop-category-element .jd-unstyled-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*-- Heading --*/
+
+.jd-hikashop-category-element .jd-slider-heading {
+    color: #171717;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.jd-hikashop-category-element .jd-slider-subHeading {
+    color: #ec1e5f;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 5px 0;
+    padding-left: 10px;
+
+}
+
+/*-- buttons-- */
+
+.jd-hikashop-category-element .jd-slider-btn {
+    background-color: #f7335d;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 45px;
+    -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+    border-radius: 35px;
+}
+
+.jd-hikashop-category-element .jd-slider-btn:hover {
+    color: #fff;
+}
+
+/*-- Slick Slider style --*/
+
+.jd-hikashop-category-element .slick-dotted.slick-slider {
+    margin-bottom: 50px;
+}
+
+.jd-hikashop-category-element .slick-dots {
+    bottom: -50px;
+}
+
+.jd-hikashop-category-element .slick-dots li,
+.jd-hikashop-category-element .slick-dots li button {
+    height: auto;
+    width: auto;
+    margin: 0;
+}
+
+.jd-hikashop-category-element .slick-dots li button:before {
+    height: 12px;
+    width: 12px;
+    display: block;
+    position: static;
+    opacity: 1 !important;
+    background: #d8d8d8;
+    border-radius: 100%;
+    font-size: 0;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.jd-hikashop-category-element .slick-dots li.slick-active button:before {
+    background: #ec1e5f;
+    width: 25px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+/*jd category slider item list style*/
+
+.jd-hikashop-category-element .jd-category-slider .jd-slider-category-item-list > ul > li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.jd-hikashop-category-element .jd-category-slider .jd-slider-category-item-list > ul > li > a {
+    color: #f7335d;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0px 5px 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+.jd-hikashop-category-element .jd-category-slider .jd-slider-category-item-list > ul > li.active a:before {
+    content: "\f00c";
+    font-family: Font Awesome\ 5 Free;
+    font-size: 14px;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+}
+
+/*Sider Cart wrapper style*/
+
+.jd-hikashop-category-element .jd-slider-cart-wrapper ul > li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.jd-hikashop-category-element .jd-slider-cart-wrapper ul > li > a {
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 35px;
+    width: 35px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: #f0f0f0;
+    display: block;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.jd-hikashop-category-element .jd-slider-cart-wrapper ul > li > a:hover {
+    background: #ec1e5f;
+}
+
+.jd-hikashop-category-element .jd-slider-cart-wrapper ul > li.jd-icon-cart > a {
+    background-image: url('../image/cart-Icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jd-hikashop-category-element .jd-slider-cart-wrapper ul > li.jd-icon-cart > a:hover {
+    background-image: url('../image/cart-Icon-hover.png');
+}
+
+.jd-hikashop-category-element .jd-slider-cart-wrapper ul > li.jd-icon-heart > a {
+    background-image: url('../image/hart-Icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.jd-hikashop-category-element .jd-slider-cart-wrapper ul > li.jd-icon-heart > a:hover {
+    background-image: url('../image/hart-Icon-hover.png');
+}
+
+.jd-hikashop-category-element .jd-slider-cart-wrapper {
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item.slick-slide.slick-current.slick-active .jd-slider-cart-wrapper,
+.jd-hikashop-category-element .jd-hikashop-category-item:hover .jd-slider-cart-wrapper {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*=======================================
+-- Jd Hikashop Category Slider Start
+=========================================*/
+
+.jd-hikashop-category-element {
+    background: #fff;
+    position: relative;
+    padding: 80px 0;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-container {
+    margin-top: 50px;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-container .jd-hikashop-category-item {
+    padding: 15px;
+    border: 2px solid transparent;
+}
+
+.jd-hikashop-category-item.slick-slide.slick-current.slick-active {
+    border-color: #ec1e5f;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item .jd-hikashop-category-item a {
+    display: block;
+    text-align: center;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item .jd-hikashop-category-item-image a img {
+    display: inline-block;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item-content {
+    margin-top: 30px;
+    position: relative;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item-content .jd-hikashop-category-heading {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item-content .jd-hikashop-category-heading a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #171717;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item-content .jd-hikashop-category-price {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item-content .jd-hikashop-category-price a {
+    color: #ec1e5f;
+    text-decoration: none;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item-content .jd-slider-rating {
+    padding: 20px 0;
+    position: relative;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item-content .jd-slider-rating ul {
+    text-align: center;
+    display: block;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item-content .jd-slider-rating ul > li {
+    display: inline-block;
+    color: #ffc11b;
+}
+
+.jd-hikashop-category-element .jd-hikashop-category-item-content .jd-slider-rating ul > li > a {
+    display: block;
+    color: #ffc11b;
+    text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    .jd-hikashop-category-element .jd-hikashop-category-wrapper .jd-slider-row .jd-hikashop-category-item-list,
+    .jd-hikashop-category-element .jd-hikashop-category-wrapper .jd-slider-row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .jd-hikashop-category-element .jd-hikashop-category-wrapper .jd-slider-row .jd-hikashop-category-item-list {
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        padding-bottom: 5px;
+        height: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .jd-hikashop-category-element .jd-hikashop-category-item-list {
+        padding: 20px 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /*jd category slider item list style*/
+    .jd-hikashop-category-element .jd-category-slider .jd-slider-category-item-list > ul > li {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .jd-hikashop-category-element .jd-category-slider .jd-slider-category-item-list > ul > li:last-child {
+        margin: 0;
+    }
+}

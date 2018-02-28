@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+  <name>JD Hikashop</name>
+  <author>Joomdev</author>
+  <version>1.7.0</version>
+  <description>JD HIKASHOP CATEGORY</description>
+  <files>
+    <filename>mod_jd_hikashop.xml</filename>
+    <filename module="mod_jd_hikashop">mod_jd_hikashop.php</filename>
+    <filename>index.html</filename>
+	<filename>helper.php</filename>
+    <filename>tmpl/default.php</filename>
+	<filename>assets/images/social_icons.png</filename>
+	<filename>assets/css/mod_my.css</filename>
+    <filename>tmpl/index.html</filename>
+  </files>
+   <config>
+		<fields name="params">
+				<fieldset name="basic">
+				    <field
+                        name="title"
+					    type="text"
+					    default="JD-HIKASHOP"
+						label="Titile" />
+					<field
+                        name="subtitle"
+					    type="text"
+					    default="JD-HIKASHOP SUBTITLE"
+						label="Subtitle" />
+						
+					<field
+                        name="selectcategory"
+					    type="sql"
+					    default="category_name"
+						label="Select an category"
+						query="SELECT category_id, category_name FROM #__hikashop_category where category_type='product'"
+						key_field="category_name"
+						value_field="category_name" /> 
+						
+					<field
+                        name="noofrows"
+					    type="text"
+					    default="1"
+						label="No of Rows" />
+						
+				    <field
+                        name="noofcols"
+					    type="text"
+					    default="1"
+						label="No of Cols" />
+						
+					<field
+						name="autoplay"
+						type="radio"
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="Auto Play"
+						description="Auto Play">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					
+					<field
+						name="autoplayspeedoptional"
+						type="text"
+						label="Autoplay Speed Optional"
+						description="Auto Play">
+					</field>
+					
+					<field
+						name="displaybullets"
+						type="radio"
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="Display Bullets"
+						description="Display Bullets">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					<field
+						name="displayarrows"
+						type="radio"
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="Display Arrows"
+						description="Display Arrows">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					<field
+						name="featuredproducts"
+						type="radio"
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="Featured Products"
+						description="Featured Products">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					<field
+						name="newarrival"
+						type="radio"
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="New Arrival"
+						description="New Arrival">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					<field
+						name="hotproducts"
+						type="radio"
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="Hot Products"
+						description="Hot Products">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					<field
+						name="bestseller"
+						type="radio"
+						default="1"
+						class="btn-group btn-group-yesno"
+						label="Best Seller"
+						description="Best Seller">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+				 
+				</fieldset>
+		</fields>
+</config>
+<params/>
+</extension>
