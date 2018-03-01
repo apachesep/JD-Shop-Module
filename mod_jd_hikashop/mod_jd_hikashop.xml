@@ -3,7 +3,7 @@
 	type="module"
 	version="1.7"
 	client="site"
-	method="upgrade" >
+	method="upgrade">
   <name>JD Hikashop</name>
   <author>Joomdev</author>
   <version>1.7.0</version>
@@ -12,7 +12,6 @@
   <authorEmail>info@joomdev.com</authorEmail>
   <authorUrl>www.joomDev.com</authorUrl>
   <creationDate>2/3/2018</creationDate> 
-  </extension>
   <updateservers>
 		<server type="extension" name="mod_jd_hikashop" priority="1">https://www.joomdev.com/extensionupdates/mod_jd_hikashop</server>
 	</updateservers>
@@ -137,5 +136,4 @@
 				</fieldset>
 		</fields>
 </config>
-<params/>
 </extension>
