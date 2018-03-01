@@ -15,6 +15,11 @@
 	<filename>helper.php</filename>
     <filename>tmpl/default.php</filename>
     <filename>tmpl/index.html</filename>
+    <filename>assets/css/slick.css</filename>
+    <filename>assets/css/slick-theme.css</filename>
+    <filename>assets/css/style.css</filename>
+    <filename>assets/js/custom-script.js</filename>
+    <filename>assets/js/slick.min.js</filename>
   </files>
    <config>
 		<fields name="params">
