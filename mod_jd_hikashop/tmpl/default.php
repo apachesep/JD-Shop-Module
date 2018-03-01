@@ -8,14 +8,17 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 			$document->addStyleSheet('modules'.'/'.'mod_jd_hikashop'.'/'.'assets'.'/'.'css'.'/'.'style.css');
 			$document->addScript('modules'.'/'.'mod_jd_hikashop'.DS.'assets'.DS.'js'.DS.'slick.min.js');
 			//$document->addScript('modules'.'/'.'mod_jd_hikashop'.DS.'assets'.DS.'js'.DS.'custom-script.js');
- 
+		    if (!defined('DS'))
+			{
+				define('DS', DIRECTORY_SEPARATOR);
+			}
+
+			include_once rtrim(JPATH_ADMINISTRATOR, DS) . DS . 'components' . DS . 'com_hikashop' . DS . 'helpers' . DS . 'helper.php';
 ?>
      
-    <!---- Font Awesome ---->
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <!-- Bootstrap -->
+  <!---- Font Awesome ---->
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
  
-<!---- <script type="text/javascript" src="modules/mod_jd_hikashop/assets/js/slick.min.js"></script> ---->
   <div class="jd-hikashop-category-element">
         
             <div class="jd-category-slider jd-hikashop-category-wrapper">
@@ -49,20 +52,22 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
                     </div>
 
                 </div>
-				<?php if(empty($count)){ ?>
-					<div class="alert alert-error"><a data-dismiss="alert" class="close">x</a><div><p><?php echo "ADD PRODUCT"; ?></p></div></div>
+				
+				<?php if(empty($count)){  ?>
+					<div class="alert alert-error"><a data-dismiss="alert" class="close">x</a><div><p style="color:black;"><?php echo "ADD PRODUCT"; ?></p></div></div>
 				<?php } ?>
                 <div class="jd-hikashop-category-container">
                     <div class="jd-hikashop-category-item-wrapper">
 						<?php foreach($item as $items) :?>
+						 <?php $link = hikashop_contentLink('product&task=show&cid='.$items['product_id'].'&name='.$items['product_alias']."false","true");?>
 							<div class="jd-hikashop-category-item">
 								<div class="jd-hikashop-category-item-image text-center">
-									<a href="#"><img src="/joomla3/images/com_hikashop/upload/<?php echo $items['file_path']?>" alt=""></a>
+									<a href="#"><img src="<?php echo JURI::base();?>/images/com_hikashop/upload/<?php echo $items['file_path']?>" alt=""></a>
 								</div>
 								<div class="jd-hikashop-category-item-content text-center">
 									<div class="jd-slider-cart-wrapper">
 										<ul class="jd-unstyled-list">
-											<li class="jd-icon-cart"><a href="<?php echo 'index.php/hikashop-menu-for-categories-listing/product/'.$items['product_id'].'-'. $items['product_alias']?>"></a></li>
+											<li class="jd-icon-cart"><a href="<?php echo $link;?>"></a></li>
 											<li class="jd-icon-heart"><a href="#"></a></li>
 										</ul>
 									</div>
@@ -76,13 +81,13 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 										</ul>
 									</div>
 									<h5 class="jd-hikashop-category-heading">
-										<a href="<?php echo 'index.php/hikashop-menu-for-categories-listing/product/'.$items['product_id'].'-'. $items['product_alias']?>"><?php echo $items['product_name'];?></a>
+										<a href="<?php echo $link; ?>"><?php echo $items['product_name'];?></a>
 									</h5>
 									<h5 class="jd-hikashop-category-heading">
 										<a href="#"><?php echo $items['category_name'];?></a>
 									</h5>
 									<p class="jd-hikashop-category-price">
-										<a href="<?php echo 'index.php/hikashop-menu-for-categories-listing/product/'.$items['product_id'].'-'. $items['product_alias']?>"><?php echo $items['currency_code'];?> <?php echo $items['currency_symbol'];?> <?php echo $items['product_sort_price']; ?>
+										<a href="<?php echo $link; ?>"><?php echo $items['product_sort_price']; ?>
 										</a>
 									</p>
 								</div>
@@ -128,5 +133,3 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
     });
 });
       </script>
-	  
- 

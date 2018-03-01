@@ -35,7 +35,7 @@
 					    type="sql"
 					    default="category_name"
 						label="Select an category"
-						query="SELECT category_id, category_name FROM #__hikashop_category where category_type='product'"
+						query="SELECT category_id, category_name FROM #__hikashop_category where category_type='product' or category_type='manufacturer'"
 						key_field="category_name"
 						value_field="category_name" /> 
 						
