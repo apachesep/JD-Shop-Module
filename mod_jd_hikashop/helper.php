@@ -7,7 +7,7 @@ defined('_JEXEC') or die('Restricted access');
 class jdprice
 {
 	 public static  function getdata($selectcategory)
-		{	
+		{		$selectcategory="hot deals";
 				$db = JFactory::getDbo();
 					$query = "select *
 						from #__hikashop_product_category pcat
